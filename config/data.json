@@ -1,0 +1,56 @@
+{
+    "survivors": [
+        {
+            "rank": 1,
+            "name": "Angel",
+            "perks": ["Sprint Burst"],
+            "offering": "",
+            "item": "",
+            "addOns": [],
+            "score": 32000,
+            "escaped": true 
+        },
+        {
+            "rank": 1,
+            "name": "David",
+            "perks": ["Mettle of Man"],
+            "offering": "",
+            "item": "",
+            "addOns": [],
+            "score": 28000,
+            "escaped": true 
+        },
+        {
+            "rank": 20,
+            "name": "Savannah",
+            "perks": ["Self Care"],
+            "offering": "Dusty Noose",
+            "item": "Medkit",
+            "addOns": ["Styptic Agent"],
+            "score": 0,
+            "escaped": false 
+        },
+        {
+            "rank": 8,
+            "name": "Sadie",
+            "perks": ["Dance with Me"],
+            "offering": "",
+            "item": "",
+            "addOns": [],
+            "score": 18000,
+            "escaped": true 
+        }
+    ],
+    "killers": [
+        {
+            "rank": 1,
+            "name": "Spencer",
+            "perks": ["No one escapes death"],
+            "offering": "",
+            "power": "Chainsaw",
+            "addOns": [],
+            "score": 12000,
+            "kills": 1 
+        }
+    ]
+}
