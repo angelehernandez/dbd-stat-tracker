@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 
 const SurvivorSchema = new Schema({
     rank: {
-        type: Schema.Types.Number
+        type: Schema.Types.Number,
+        required: true
     },
     name: {
-        type: Schema.Types.String,
-        required: true
+        type: Schema.Types.String
     },
     perks: [Schema.Types.String],
     offering: {
@@ -19,10 +19,12 @@ const SurvivorSchema = new Schema({
     },
     addOns: [Schema.Types.String],
     score: {
-        type: Schema.Types.Number
+        type: Schema.Types.Number,
+        required: true
     },
     escaped: {
-        type: Schema.Types.Boolean
+        type: Schema.Types.Boolean,
+        required: true
     }
 });
 

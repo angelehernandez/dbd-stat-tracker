@@ -4,25 +4,28 @@ const Schema = mongoose.Schema;
 
 const KillerSchema = new Schema({
     rank: {
-        type: Schema.Types.Number
+        type: Schema.Types.Number,
+        required: true
     },
     name: {
-        type: Schema.Types.String,
-        required: true
+        type: Schema.Types.String
     },
     perks: [Schema.Types.String],
     offering: {
         type: Schema.Types.String
     },
     power: {
-        type: Schema.Types.String
+        type: Schema.Types.String,
+        required: true
     },
     addOns: [Schema.Types.String],
     score: {
-        type: Schema.Types.Number
+        type: Schema.Types.Number,
+        required: true
     },
     kills: {
-        type: Schema.Types.Number
+        type: Schema.Types.Number,
+        required: true
     }
 });
 
