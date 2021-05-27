@@ -41,6 +41,7 @@ This script is for testing and development purposes.
   
 Runs the app on port 8081.
 Open [http://localhost:8081](http://localhost:8081) to view it in the browser. A successful response reads "App is running."
+Currently, the app is running on [Heroku](http://dbd-stat-tracjer.herokuapp.com/).
   
 ## Usage
 
