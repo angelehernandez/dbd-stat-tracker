@@ -29,18 +29,16 @@ router.route("/")
 
 // main functionality
 router.route("/survivors")
-    // .get((req, res) => {
-    //     console.log("GET /doctors");
-
-    //     // already implemented:
-    //     Doctor.find({})
-    //         .then(data => {
-    //             res.status(200).send(data);
-    //         })
-    //         .catch(err => {
-    //             res.status(500).send(err);
-    //         });
-    // })
+    .get((req, res) => {
+        console.log("GET /survivors");
+        Survivor.find({})
+            .then(data => {
+                res.status(200).send(data);
+            })
+            .catch(err => {
+                res.status(500).send(err);
+            });
+    })
     .post((req, res) => {
         console.log("POST /survivors");
 
@@ -107,18 +105,16 @@ router.route("/survivors")
     });
 
 router.route("/killers")
-    // .get((req, res) => {
-    //     console.log("GET /doctors");
-
-    //     // already implemented:
-    //     Doctor.find({})
-    //         .then(data => {
-    //             res.status(200).send(data);
-    //         })
-    //         .catch(err => {
-    //             res.status(500).send(err);
-    //         });
-    // })
+    .get((req, res) => {
+        console.log("GET /killers");
+        Killer.find({})
+            .then(data => {
+                res.status(200).send(data);
+            })
+            .catch(err => {
+                res.status(500).send(err);
+            });
+    })
     .post((req, res) => {
         console.log("POST /killers");
 
