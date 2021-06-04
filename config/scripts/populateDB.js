@@ -20,18 +20,18 @@ const populate = (callback) => {
             console.log("Could not connect to database.");
         }
         // console.log("Clearing database...");
-        const schemas = [ Perk ];
+        const schemas = [ Survivor, Killer, Perk ];
         Promise
             .all(
                 // first delete any data that currently exists:
                 schemas.map(schema => schema.deleteMany())
             )
-            // .then(() => {
-            //     return Killer.insertMany(data.killers);
-            // })
-            // .then(() => {
-            //     return Survivor.insertMany(data.survivors);
-            // })
+            .then(() => {
+                return Killer.insertMany(data.killers);
+            })
+            .then(() => {
+                return Survivor.insertMany(data.survivors);
+            })
             .then(() => {
                 return Perk.insertMany(data.perks);
             })
