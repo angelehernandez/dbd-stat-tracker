@@ -97,7 +97,7 @@ router.route("/survivors")
             const perksLength = survivor.perks.length;
             survivor.perks.forEach((perk, jindex) => {
                 // query for perk in DB
-                Perk.findOne({ name: perk })
+                Perk.findOne({ name: perk, type: "Survivor" })
                     .then(data => {
                         if (!data) {
                             res.status(404).send({
@@ -148,7 +148,6 @@ router.route("/killers")
     })
     .post((req, res) => {
         console.log("POST /killers");
-        console.log(req.body.score);
 
         // ensure input is NOT a list
         let killer = req.body;
@@ -202,7 +201,7 @@ router.route("/killers")
         const perksLength = killer.perks.length;
         killer.perks.forEach((perk, jindex) => {
             // query for perk in DB
-            Perk.findOne({ name: perk })
+            Perk.findOne({ name: perk, type: "Killer" })
                 .then(data => {
                     if (!data) {
                         res.status(404).send({
