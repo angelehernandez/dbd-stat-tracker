@@ -1,56 +1,716 @@
 {
-    "survivors": [
+    "perks": [
         {
-            "rank": 1,
-            "name": "Angel",
-            "perks": ["Sprint Burst"],
-            "offering": "",
-            "item": "",
-            "addOns": [],
-            "score": 32000,
-            "escaped": true 
+            "name": "Ace in the Hole",
+            "type": "Survivor"
         },
         {
-            "rank": 1,
-            "name": "David",
-            "perks": ["Mettle of Man"],
-            "offering": "",
-            "item": "",
-            "addOns": [],
-            "score": 28000,
-            "escaped": true 
+            "name": "Adrenaline",
+            "type": "Survivor"
         },
         {
-            "rank": 20,
-            "name": "Savannah",
-            "perks": ["Self Care"],
-            "offering": "Dusty Noose",
-            "item": "Medkit",
-            "addOns": ["Styptic Agent"],
-            "score": 0,
-            "escaped": false 
+            "name": "Aftercare",
+            "type": "Survivor"
         },
         {
-            "rank": 8,
-            "name": "Sadie",
-            "perks": ["Dance with Me"],
-            "offering": "",
-            "item": "",
-            "addOns": [],
-            "score": 18000,
-            "escaped": true 
-        }
-    ],
-    "killers": [
+            "name": "Alert",
+            "type": "Survivor"
+        },
         {
-            "rank": 1,
-            "name": "Spencer",
-            "perks": ["No one escapes death"],
-            "offering": "",
-            "power": "Chainsaw",
-            "addOns": [],
-            "score": 12000,
-            "kills": 1 
+            "name": "Any Means Necessary",
+            "type": "Survivor"
+        },
+        {
+            "name": "Appraisal",
+            "type": "Survivor"
+        },
+        {
+            "name": "Autodidact",
+            "type": "Survivor"
+        },
+        {
+            "name": "Babysitter",
+            "type": "Survivor"
+        },
+        {
+            "name": "Balanced Landing",
+            "type": "Survivor"
+        },
+        {
+            "name": "Better Together",
+            "type": "Survivor"
+        },
+        {
+            "name": "Bite the Bullet",
+            "type": "Survivor"
+        },
+        {
+            "name": "Blast Mine",
+            "type": "Survivor"
+        },
+        {
+            "name": "Blood Pact",
+            "type": "Survivor"
+        },
+        {
+            "name": "Boil Over",
+            "type": "Survivor"
+        },
+        {
+            "name": "Bond",
+            "type": "Survivor"
+        },
+        {
+            "name": "Borrowed Time",
+            "type": "Survivor"
+        },
+        {
+            "name": "Botany Knowledge",
+            "type": "Survivor"
+        },
+        {
+            "name": "Breakdown",
+            "type": "Survivor"
+        },
+        {
+            "name": "Breakout",
+            "type": "Survivor"
+        },
+        {
+            "name": "Buckle Up",
+            "type": "Survivor"
+        },
+        {
+            "name": "Built to Last",
+            "type": "Survivor"
+        },
+        {
+            "name": "Calm Spirit",
+            "type": "Survivor"
+        },
+        {
+            "name": "Camaraderie",
+            "type": "Survivor"
+        },
+        {
+            "name": "Counterforce",
+            "type": "Survivor"
+        },
+        {
+            "name": "Dance With Me",
+            "type": "Survivor"
+        },
+        {
+            "name": "Dark Sense",
+            "type": "Survivor"
+        },
+        {
+            "name": "Dead Hard",
+            "type": "Survivor"
+        },
+        {
+            "name": "Deception",
+            "type": "Survivor"
+        },
+        {
+            "name": "Decisive Strike",
+            "type": "Survivor"
+        },
+        {
+            "name": "Deja Vu",
+            "type": "Survivor"
+        },
+        {
+            "name": "Deliverance",
+            "type": "Survivor"
+        },
+        {
+            "name": "Desperate Measures",
+            "type": "Survivor"
+        },
+        {
+            "name": "Detective's Hunch",
+            "type": "Survivor"
+        },
+        {
+            "name": "Distortion",
+            "type": "Survivor"
+        },
+        {
+            "name": "Diversion",
+            "type": "Survivor"
+        },
+        {
+            "name": "Empathy",
+            "type": "Survivor"
+        },
+        {
+            "name": "Fast Track",
+            "type": "Survivor"
+        },
+        {
+            "name": "Fixated",
+            "type": "Survivor"
+        },
+        {
+            "name": "Flashbang",
+            "type": "Survivor"
+        },
+        {
+            "name": "Flip-Flop",
+            "type": "Survivor"
+        },
+        {
+            "name": "For the People",
+            "type": "Survivor"
+        },
+        {
+            "name": "Head On",
+            "type": "Survivor"
+        },
+        {
+            "name": "Hope",
+            "type": "Survivor"
+        },
+        {
+            "name": "Inner Strength",
+            "type": "Survivor"
+        },
+        {
+            "name": "Iron Will",
+            "type": "Survivor"
+        },
+        {
+            "name": "Kindred",
+            "type": "Survivor"
+        },
+        {
+            "name": "Leader",
+            "type": "Survivor"
+        },
+        {
+            "name": "Left Behind",
+            "type": "Survivor"
+        },
+        {
+            "name": "Lightweight",
+            "type": "Survivor"
+        },
+        {
+            "name": "Lithe",
+            "type": "Survivor"
+        },
+        {
+            "name": "Lucky Break",
+            "type": "Survivor"
+        },
+        {
+            "name": "Mettle of man",
+            "type": "Survivor"
+        },
+        {
+            "name": "No Mither",
+            "type": "Survivor"
+        },
+        {
+            "name": "No One Left Behind",
+            "type": "Survivor"
+        },
+        {
+            "name": "Object of Obsession",
+            "type": "Survivor"
+        },
+        {
+            "name": "Off the Record",
+            "type": "Survivor"
+        },
+        {
+            "name": "Open-Handed",
+            "type": "Survivor"
+        },
+        {
+            "name": "Pharmacy",
+            "type": "Survivor"
+        },
+        {
+            "name": "Plunderer's Instinct",
+            "type": "Survivor"
+        },
+        {
+            "name": "Poised",
+            "type": "Survivor"
+        },
+        {
+            "name": "Power Struggle",
+            "type": "Survivor"
+        },
+        {
+            "name": "Premonition",
+            "type": "Survivor"
+        },
+        {
+            "name": "Prove Thyself",
+            "type": "Survivor"
+        },
+        {
+            "name": "Quick & Quiet",
+            "type": "Survivor"
+        },
+        {
+            "name": "Red Herring",
+            "type": "Survivor"
+        },
+        {
+            "name": "Repressed Alliance",
+            "type": "Survivor"
+        },
+        {
+            "name": "Resilience",
+            "type": "Survivor"
+        },
+        {
+            "name": "Resurgence",
+            "type": "Survivor"
+        },
+        {
+            "name": "Rookie Spirit",
+            "type": "Survivor"
+        },
+        {
+            "name": "Saboteur",
+            "type": "Survivor"
+        },
+        {
+            "name": "Second Wind",
+            "type": "Survivor"
+        },
+        {
+            "name": "Self-Care",
+            "type": "Survivor"
+        },
+        {
+            "name": "Self-Preservation",
+            "type": "Survivor"
+        },
+        {
+            "name": "Slippery Meat",
+            "type": "Survivor"
+        },
+        {
+            "name": "Small Game",
+            "type": "Survivor"
+        },
+        {
+            "name": "Smash Hit",
+            "type": "Survivor"
+        },
+        {
+            "name": "Sole Survivor",
+            "type": "Survivor"
+        },
+        {
+            "name": "Solidarity",
+            "type": "Survivor"
+        },
+        {
+            "name": "Soul Guard",
+            "type": "Survivor"
+        },
+        {
+            "name": "Spine Chill",
+            "type": "Survivor"
+        },
+        {
+            "name": "Sprint Burst",
+            "type": "Survivor"
+        },
+        {
+            "name": "Steak Out",
+            "type": "Survivor"
+        },
+        {
+            "name": "Streetwise",
+            "type": "Survivor"
+        },
+        {
+            "name": "Technician",
+            "type": "Survivor"
+        },
+        {
+            "name": "Tenacity",
+            "type": "Survivor"
+        },
+        {
+            "name": "This Is Not Happening",
+            "type": "Survivor"
+        },
+        {
+            "name": "Up the Ante",
+            "type": "Survivor"
+        },
+        {
+            "name": "Unbreakable",
+            "type": "Survivor"
+        },
+        {
+            "name": "Urban Evasion",
+            "type": "Survivor"
+        },
+        {
+            "name": "Vigil",
+            "type": "Survivor"
+        },
+        {
+            "name": "Visionary",
+            "type": "Survivor"
+        },
+        {
+            "name": "Wake Up!",
+            "type": "Survivor"
+        },
+        {
+            "name": "We'll Make It",
+            "type": "Survivor"
+        },
+        {
+            "name": "We're Gonna Live Forever",
+            "type": "Survivor"
+        },
+        {
+            "name": "Windows of Opportunity",
+            "type": "Survivor"
+        },
+        {
+            "name": "A Nurse's Calling",
+            "type": "Killer"
+        },
+        {
+            "name": "Agitation",
+            "type": "Killer"
+        },
+        {
+            "name": "Bamboozle",
+            "type": "Killer"
+        },
+        {
+            "name": "Barbecue & Chilli",
+            "type": "Killer"
+        },
+        {
+            "name": "Beast of Prey",
+            "type": "Killer"
+        },
+        {
+            "name": "Bitter Murmur",
+            "type": "Killer"
+        },
+        {
+            "name": "Blood Echo",
+            "type": "Killer"
+        },
+        {
+            "name": "Blood Warden",
+            "type": "Killer"
+        },
+        {
+            "name": "Bloodhound",
+            "type": "Killer"
+        },
+        {
+            "name": "Brutal Strength",
+            "type": "Killer"
+        },
+        {
+            "name": "Corrupt Intervention",
+            "type": "Killer"
+        },
+        {
+            "name": "Coulrophobia",
+            "type": "Killer"
+        },
+        {
+            "name": "Coup de Grace",
+            "type": "Killer"
+        },
+        {
+            "name": "Cruel Limits",
+            "type": "Killer"
+        },
+        {
+            "name": "Dark Devotion",
+            "type": "Killer"
+        },
+        {
+            "name": "Dead Man's Switch",
+            "type": "Killer"
+        },
+        {
+            "name": "Deathbound",
+            "type": "Killer"
+        },
+        {
+            "name": "Deerstalker",
+            "type": "Killer"
+        },
+        {
+            "name": "Discordance",
+            "type": "Killer"
+        },
+        {
+            "name": "Distressing",
+            "type": "Killer"
+        },
+        {
+            "name": "Dragon's Grip",
+            "type": "Killer"
+        },
+        {
+            "name": "Dying Light",
+            "type": "Killer"
+        },
+        {
+            "name": "Enduring",
+            "type": "Killer"
+        },
+        {
+            "name": "Eruption",
+            "type": "Killer"
+        },
+        {
+            "name": "Fire Up",
+            "type": "Killer"
+        },
+        {
+            "name": "Forced Penance",
+            "type": "Killer"
+        },
+        {
+            "name": "Franklin's Demise",
+            "type": "Killer"
+        },
+        {
+            "name": "Furtive Chase",
+            "type": "Killer"
+        },
+        {
+            "name": "Gearhead",
+            "type": "Killer"
+        },
+        {
+            "name": "Hangman's Trick",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: Blood Favour",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: Crowd Control",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: Devour Hope",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: Haunted Ground",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: Huntress Lullaby",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: No One Escapes Death",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: Retribution",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: Ruin",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: The Third Seal",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: Thrill of the Hunt",
+            "type": "Killer"
+        },
+        {
+            "name": "Hex: Undying",
+            "type": "Killer"
+        },
+        {
+            "name": "Hoarder",
+            "type": "Killer"
+        },
+        {
+            "name": "Hysteria",
+            "type": "Killer"
+        },
+        {
+            "name": "I'm All Ears",
+            "type": "Killer"
+        },
+        {
+            "name": "Infectious Fright",
+            "type": "Killer"
+        },
+        {
+            "name": "Insidious",
+            "type": "Killer"
+        },
+        {
+            "name": "Iron Grasp",
+            "type": "Killer"
+        },
+        {
+            "name": "Iron Maiden",
+            "type": "Killer"
+        },
+        {
+            "name": "Knock Out",
+            "type": "Killer"
+        },
+        {
+            "name": "Lethal Pursuer",
+            "type": "Killer"
+        },
+        {
+            "name": "Lightborn",
+            "type": "Killer"
+        },
+        {
+            "name": "Mad Grit",
+            "type": "Killer"
+        },
+        {
+            "name": "Make Your Choice",
+            "type": "Killer"
+        },
+        {
+            "name": "Mindbreaker",
+            "type": "Killer"
+        },
+        {
+            "name": "Monitor & Abuse",
+            "type": "Killer"
+        },
+        {
+            "name": "Monstrous Shrine",
+            "type": "Killer"
+        },
+        {
+            "name": "Nemesis",
+            "type": "Killer"
+        },
+        {
+            "name": "No Way Out",
+            "type": "Killer"
+        },
+        {
+            "name": "Oppression",
+            "type": "Killer"
+        },
+        {
+            "name": "Overcharge",
+            "type": "Killer"
+        },
+        {
+            "name": "Overwhelming Presence",
+            "type": "Killer"
+        },
+        {
+            "name": "Play with Your Food",
+            "type": "Killer"
+        },
+        {
+            "name": "Pop Goes the Weasel",
+            "type": "Killer"
+        },
+        {
+            "name": "Predator",
+            "type": "Killer"
+        },
+        {
+            "name": "Rancor",
+            "type": "Killer"
+        },
+        {
+            "name": "Remember Me",
+            "type": "Killer"
+        },
+        {
+            "name": "Shadowborn",
+            "type": "Killer"
+        },
+        {
+            "name": "Sloppy Butcher",
+            "type": "Killer"
+        },
+        {
+            "name": "Spies from the Shadows",
+            "type": "Killer"
+        },
+        {
+            "name": "Spirit Fury",
+            "type": "Killer"
+        },
+        {
+            "name": "Starstruck",
+            "type": "Killer"
+        },
+        {
+            "name": "Stridor",
+            "type": "Killer"
+        },
+        {
+            "name": "Surge",
+            "type": "Killer"
+        },
+        {
+            "name": "Surveillance",
+            "type": "Killer"
+        },
+        {
+            "name": "Territorial Imperative",
+            "type": "Killer"
+        },
+        {
+            "name": "Thanatophobia",
+            "type": "Killer"
+        },
+        {
+            "name": "Thrilling Tremors",
+            "type": "Killer"
+        },
+        {
+            "name": "Tinkerer",
+            "type": "Killer"
+        },
+        {
+            "name": "Trail of Torment",
+            "type": "Killer"
+        },
+        {
+            "name": "Unnerving Presence",
+            "type": "Killer"
+        },
+        {
+            "name": "Unrelenting",
+            "type": "Killer"
+        },
+        {
+            "name": "Whispers",
+            "type": "Killer"
+        },
+        {
+            "name": "Zanshin Tactics",
+            "type": "Killer"
         }
     ]
 }

@@ -2,6 +2,7 @@
 
 const Killer = require("../../src/backend/schema/Killer");
 const Survivor = require("../../src/backend/schema/Survivor");
+const Perk = require("../../src/backend/schema/Perk");
 const data = require("../data.json");
 require("dotenv").config();
 
@@ -19,17 +20,20 @@ const populate = (callback) => {
             console.log("Could not connect to database.");
         }
         // console.log("Clearing database...");
-        const schemas = [ Killer, Survivor ];
+        const schemas = [ Perk ];
         Promise
             .all(
                 // first delete any data that currently exists:
                 schemas.map(schema => schema.deleteMany())
             )
+            // .then(() => {
+            //     return Killer.insertMany(data.killers);
+            // })
+            // .then(() => {
+            //     return Survivor.insertMany(data.survivors);
+            // })
             .then(() => {
-                return Killer.insertMany(data.killers);
-            })
-            .then(() => {
-                return Survivor.insertMany(data.survivors);
+                return Perk.insertMany(data.perks);
             })
             .catch(err => {
                 console.log(err);

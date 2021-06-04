@@ -13,7 +13,7 @@ const PerkSchema = new Schema({
 
 PerkSchema.statics.create = function(obj) {
     const Perk = mongoose.model("Perk", PerkSchema);
-    const Perk = new Perk();
+    const perk = new Perk();
     perk.name = obj.name;
     perk.type = obj.type;
     return perk;

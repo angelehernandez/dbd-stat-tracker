@@ -4,6 +4,7 @@ const resetDB = require("../../config/scripts/populateDB")
 
 const Killer = require("./schema/Killer");
 const Survivor = require("./schema/Survivor");
+const Perk = require("./schema/Perk");
 
 const express = require("express");
 const router = express.Router();
@@ -174,5 +175,74 @@ router.route("/killers")
                     res.status(500).send(err);
                 })
     });
+
+router.route("/perks")
+    .get((req, res) => {
+        console.log("GET /perks");
+        Perk.find({})
+            .then(data => {
+                res.status(200).send(data);
+            })
+            .catch(err => {
+                res.status(500).send(err);
+            });
+    })
+    .post((req, res) => {
+        console.log("POST /perks");
+
+        // functionality for lists and non-lists
+        const perks = req.body;
+        if (perks instanceof Array) {
+            perks.forEach((perk, index) => {
+                // check each perk for required elements
+                if (!perk.name) {
+                    res.status(500).send({
+                        message: `Perk ${index+1} is missing a name.`
+                    });
+                    return;
+                };
+                if (!perk.type) {
+                    res.status(500).send({
+                        message: `Perk ${index+1} is missing a type.`
+                    });
+                    return;
+                };
+                // create and save each perk entry
+                Perk.create(perk).save()
+                    .then(perk => {
+                        res.status(201).send(perk);
+                    })
+                    .catch(err => {
+                        res.status(500).send(err);
+                    });
+                return;
+            })
+        }
+        else {
+            // check perk for required elements
+            if (!perks.name) {
+                res.status(500).send({
+                    message: `Perk is missing a name.`
+                });
+                return;
+            };
+            if (!perks.type) {
+                res.status(500).send({
+                    message: `Perk is missing a type.`
+                });
+                return;
+            };
+            // create and save each perk entry
+            Perk.create(perks).save()
+                .then(perks => {
+                    res.status(201).send(perks);
+                })
+                .catch(err => {
+                    res.status(500).send(err);
+                });
+            return;
+        };
+    });
+
 
 module.exports = router;
