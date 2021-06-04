@@ -10,7 +10,10 @@ const SurvivorSchema = new Schema({
     name: {
         type: Schema.Types.String
     },
-    perks: [Schema.Types.String],
+    perks: [{
+        type: Schema.Types.ObjectId, 
+        ref: "Perk"
+    }],
     offering: {
         type: Schema.Types.String
     },
