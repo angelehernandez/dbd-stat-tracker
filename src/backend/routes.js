@@ -235,11 +235,13 @@ router.route("/killers")
         // create and save killer entry
         Killer.create(killer).save()
             .then(killer => {
-                    res.status(201).send(killer);
-                })
-                .catch(err => {
-                    res.status(500).send(err);
-                })
+                res.status(201).send(killer);
+                return;
+            })
+            .catch(err => {
+                res.status(500).send(err);
+                return;
+            })
     });
 
 router.route("/perks")
