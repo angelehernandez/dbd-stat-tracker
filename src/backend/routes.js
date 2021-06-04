@@ -148,9 +148,10 @@ router.route("/killers")
     })
     .post((req, res) => {
         console.log("POST /killers");
+        console.log(req.body.score);
 
         // ensure input is NOT a list
-        const killer = req.body;
+        let killer = req.body;
         if (killer instanceof Array) {
             res.status(400).send({message: "Killer should not be an array."});
             return;
@@ -169,13 +170,13 @@ router.route("/killers")
             });
             return;
         }
-        if (!killer.score) {
+        if (killer.score == null) {
             res.status(500).send({
                 message: "Killer is missing a score."
             });
             return;
         };
-        if (!killer.kills) {
+        if (killer.kills == null) {
             res.status(500).send({
                 message: "Killer is missing a kill count."
             });
@@ -195,6 +196,41 @@ router.route("/killers")
         if (!killer.addOns) {
             killer.addOns = [];
         };
+
+        // check perks with DB
+        let perksFromDB = [];
+        const perksLength = killer.perks.length;
+        killer.perks.forEach((perk, jindex) => {
+            // query for perk in DB
+            Perk.findOne({ name: perk })
+                .then(data => {
+                    if (!data) {
+                        res.status(404).send({
+                            message: `Killer's perk ${jindex+1} not found.`
+                        });
+                        return;
+                    }
+                    perksFromDB.push(data);
+                })
+                .then(() => {
+                    // all perks found
+                    if (perksLength === perksFromDB.length) {
+                        // update perks field in survivor
+                        killer.perks = perksFromDB;
+
+                        // create and save killer entry
+                        Killer.create(killer).save()
+                            .then(killer => {
+                                res.status(201).send(killer);
+                                return;
+                            })
+                            .catch(err => {
+                                res.status(500).send(err);
+                                return;
+                            })
+                    };
+                })
+        })
 
         // create and save killer entry
         Killer.create(killer).save()
