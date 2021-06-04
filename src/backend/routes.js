@@ -54,8 +54,8 @@ router.route("/survivors")
             return;
         };
         
+        // check each survivor for required elements
         survivors.forEach((survivor, index) => {
-            // check each survivor for required elements
             if (!survivor.rank) {
                 res.status(500).send({
                     message: `Survivor ${index+1} is missing a rank.`
@@ -92,16 +92,46 @@ router.route("/survivors")
                 survivor.addOns = [];
             };
 
-            // create and save survivor entry
-            Survivor.create(survivor).save()
-                .then(survivor => {
-                        res.status(201).send({
-                            message: "All four survivors logged."
-                        });
+            // check perks with database
+            let perksFromDB = [];
+            const perksLength = survivor.perks.length;
+            survivor.perks.forEach((perk, jindex) => {
+                // query for perk in DB
+                Perk.findOne({ name: perk })
+                    .then(data => {
+                        if (!data) {
+                            res.status(404).send({
+                                message: `Survivor ${index+1}'s perk ${jindex+1} not found.`
+                            });
+                            return;
+                        }
+                        perksFromDB.push(data);
+                    })
+                    .then(() => {
+                        // all perks found
+                        if (perksLength === perksFromDB.length) {
+                            // update perks field in survivor
+                            survivor.perks = perksFromDB;
+
+                            // create and save survivor entry
+                            Survivor.create(survivor).save()
+                                .then(() => {
+                                    res.status(201).send({
+                                        message: "All four survivors logged."
+                                    });
+                                    return;
+                                })
+                                .catch(err => {
+                                    res.status(500).send(err);
+                                    return;
+                                });
+                        };
                     })
                     .catch(err => {
                         res.status(500).send(err);
-                    })
+                        return;
+                    });
+            });
         });
     });
 
