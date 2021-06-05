@@ -274,7 +274,7 @@ router.route("/perks")
                     });
                     return;
                 }
-                else if (perk.type != "Killer" || perk.type != "Survivor") {
+                else if (perk.type != "Killer" && perk.type != "Survivor") {
                     res.status(500).send({
                         message: `Perk ${index+1} is not type 'Killer' or 'Survivor'.`
                     });
@@ -305,9 +305,10 @@ router.route("/perks")
                 });
                 return;
             }
-            else if (perks.type != "Killer" || perks.type != "Survivor") {
+            else if (perks.type != "Killer" && perks.type != "Survivor") {
+                console.log(perks.type != "Survivor");
                 res.status(500).send({
-                    message: `Perk ${index+1} is not type 'Killer' or 'Survivor'.`
+                    message: `Perk is not type 'Killer' or 'Survivor'.`
                 });
                 return;
             };
