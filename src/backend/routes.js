@@ -273,6 +273,12 @@ router.route("/perks")
                         message: `Perk ${index+1} is missing a type.`
                     });
                     return;
+                }
+                else if (perk.type != "Killer" || perk.type != "Survivor") {
+                    res.status(500).send({
+                        message: `Perk ${index+1} is not type 'Killer' or 'Survivor'.`
+                    });
+                    return;
                 };
                 // create and save each perk entry
                 Perk.create(perk).save()
@@ -296,6 +302,12 @@ router.route("/perks")
             if (!perks.type) {
                 res.status(500).send({
                     message: `Perk is missing a type.`
+                });
+                return;
+            }
+            else if (perks.type != "Killer" || perks.type != "Survivor") {
+                res.status(500).send({
+                    message: `Perk ${index+1} is not type 'Killer' or 'Survivor'.`
                 });
                 return;
             };
