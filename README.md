@@ -57,6 +57,7 @@ Currently, the data is hosted on MongoDB. A `.env` file is required with a cloni
 - /killers
 	- `.get`: shows killers in database
 	- `.post`: adds 1 killer to the database
+
 **NEW**
 - /perks
 	- `.get`: shows perks in database (/[game](https://deadbydaylight.fandom.com/wiki/Perks))
@@ -81,6 +82,7 @@ In order to post killers, 1 must be provided (not in a list) with the following 
 - **addOns** (*optional*): lsit of strings
 - **score** (*required*): number
 - **kills** (*required*): boolean
+
 
 **NEW**
 In order to post perks, at least 1 must be provided with the following fields:
