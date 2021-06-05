@@ -1,7 +1,7 @@
 
 # dbd-stat-tracker
 This project is a data tracker for Dead by Daylight. A single game will consist of 5 players, 4 survivors and 1 killer, each able to select a loadout of up to 8 elements. A screenshot of a post-match scoreboard is shown below:
-![enter image description here](https://i.ibb.co/4NJ8yfx/dbd-screenshot.png)
+![Match Screenshot](https://i.ibb.co/4NJ8yfx/dbd-screenshot.png)
 
 The following data will be saved from each survivor:
 - **Rank** (*required*): the skill rating used for matchmaking
