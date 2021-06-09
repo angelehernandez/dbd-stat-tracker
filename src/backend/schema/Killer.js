@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 
 const KillerSchema = new Schema({
     rank: {
-        type: Schema.Types.Number,
-        required: true
+        type: Schema.Types.Number
     },
     name: {
         type: Schema.Types.String
@@ -18,17 +17,14 @@ const KillerSchema = new Schema({
         type: Schema.Types.String
     },
     power: {
-        type: Schema.Types.String,
-        required: true
+        type: Schema.Types.String
     },
     addOns: [Schema.Types.String],
     score: {
-        type: Schema.Types.Number,
-        required: true
+        type: Schema.Types.Number
     },
     kills: {
-        type: Schema.Types.Number,
-        required: true
+        type: Schema.Types.Number
     }
 });
 
