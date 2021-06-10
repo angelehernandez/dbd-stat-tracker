@@ -1,0 +1,12 @@
+.header {
+    grid-area: top;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F9F9F9;
+    padding: 20px;
+}
+
+input {
+    width: 80%;
+  }
